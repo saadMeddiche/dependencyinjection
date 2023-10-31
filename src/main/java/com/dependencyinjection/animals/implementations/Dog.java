@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.dependencyinjection.animals.Animal;
 
 @Component
-@Primary
+// @Primary
 public class Dog implements Animal {
 
     @Override

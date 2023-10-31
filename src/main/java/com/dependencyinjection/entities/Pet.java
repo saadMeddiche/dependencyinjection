@@ -1,6 +1,7 @@
 package com.dependencyinjection.entities;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.dependencyinjection.animals.Animal;
@@ -19,8 +20,16 @@ public class Pet {
         this.animal = animal;
     }
 
+    // Constructor Injection
+    // @Autowired
+    // public void setAnimal(Animal animal) {
+    // this.animal = animal;
+    // }
+
+
+    // AutoWiring By Qualifier
     @Autowired
-    public void setAnimal(Animal animal) {
+    public void setAnimal(@Qualifier("dog") Animal animal) {
         this.animal = animal;
     }
 
