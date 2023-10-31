@@ -14,15 +14,15 @@ import com.dependencyinjection.entities.Pet;
 public class App {
 
     public static void main(String[] args) {
-        // dependencieinjectionUsingXml();
-        dependencieinjectionUsingJavaConfig();
+        dependencieinjectionUsingXml();
+        // dependencieinjectionUsingJavaConfig();
     }
 
     public static void dependencieinjectionUsingXml() {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
-        Pet pet = applicationContext.getBean("pet-DIusingConstructor", Pet.class);
+        Pet pet = applicationContext.getBean("pet", Pet.class);
 
         pet.voice();
     }

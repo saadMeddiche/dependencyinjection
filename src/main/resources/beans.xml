@@ -11,7 +11,11 @@
 	</bean>
 
     <bean id="pet" class="com.dependencyinjection.entities.Pet">
+		<!-- Dependencie Injection Using Constructor -->
         <constructor-arg ref="dog" />
+
+		<!-- Dependencie Injection Using Setter -->
+		<property name="animal" ref="cat"></property>
     </bean>
 
 </beans>
