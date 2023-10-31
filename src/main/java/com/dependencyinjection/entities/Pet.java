@@ -26,6 +26,12 @@ public class Pet {
     // this.animal = animal;
     // }
 
+    // Field Injection
+    // @Autowired
+    // @Qualifier("dog")
+    // public void setAnimal(Animal animal) {
+    // this.animal = animal;
+    // }
 
     // AutoWiring By Qualifier
     @Autowired
