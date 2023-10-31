@@ -19,16 +19,22 @@ public class Pet {
         this.animal = animal;
     }
 
-    // @Autowired
-    // public void setAnimal(Animal animal) {
-    //     this.animal = animal;
-    // }
-
-    // AutoWiring By Type
     @Autowired
-    public void setAnimal(Dog animal) {
+    public void setAnimal(Animal animal) {
     this.animal = animal;
     }
+
+    // AutoWiring By Name
+    // @Autowired
+    // public void setAnimal(Animal cat) {
+    //     this.animal = cat;
+    // }
+
+    // // AutoWiring By Type
+    // @Autowired
+    // public void setAnimal(Dog animal) {
+    //     this.animal = animal;
+    // }
 
     public void voice() {
         System.out.println(animal.voice());
