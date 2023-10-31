@@ -22,7 +22,7 @@ public class App {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
-        Pet pet = applicationContext.getBean("pet", Pet.class);
+        Pet pet = applicationContext.getBean("pet-DIusingConstructor", Pet.class);
 
         pet.voice();
     }
@@ -31,7 +31,7 @@ public class App {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Pet pet = applicationContext.getBean("pet", Pet.class);
+        Pet pet = applicationContext.getBean("pet-DIusingSetter", Pet.class);
 
         pet.voice();
     }

@@ -6,7 +6,14 @@ public class Pet {
 
     private Animal animal;
 
+    public Pet() {
+    }
+
     public Pet(Animal animal) {
+        this.animal = animal;
+    }
+
+    public void setAnimal(Animal animal) {
         this.animal = animal;
     }
 

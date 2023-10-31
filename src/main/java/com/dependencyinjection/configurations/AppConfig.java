@@ -18,9 +18,17 @@ public class AppConfig {
         return new Dog();
     }
 
-    @Bean(name = "pet")
-    public Pet adobtPet() {
+    // DI -> Dependency Injection
+    @Bean(name = "pet-DIusingConstructor")
+    public Pet adobtPet1() {
         return new Pet(adobtDog());
+    }
+
+    @Bean(name = "pet-DIusingSetter")
+    public Pet adobtPet2() {
+        Pet pet = new Pet();
+        pet.setAnimal(adobtCat());
+        return pet;
     }
 
 }
