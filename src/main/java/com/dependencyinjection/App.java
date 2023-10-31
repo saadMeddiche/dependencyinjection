@@ -14,8 +14,8 @@ import com.dependencyinjection.entities.Pet;
 public class App {
 
     public static void main(String[] args) {
-        dependencieinjectionUsingXml();
-        // dependencieinjectionUsingJavaConfig();
+        // dependencieinjectionUsingXml();
+        dependencieinjectionUsingJavaConfig();
     }
 
     public static void dependencieinjectionUsingXml() {
@@ -31,7 +31,7 @@ public class App {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Pet pet = applicationContext.getBean("pet-DIusingSetter", Pet.class);
+        Pet pet = applicationContext.getBean("pet", Pet.class);
 
         pet.voice();
     }
