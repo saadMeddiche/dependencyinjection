@@ -6,7 +6,7 @@ public class Pet {
 
     private Animal animal;
 
-    Pet(Animal animal) {
+    public Pet(Animal animal) {
         this.animal = animal;
     }
 

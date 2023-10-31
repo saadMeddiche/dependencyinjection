@@ -11,10 +11,7 @@
 	</bean>
 
     <bean id="pet" class="com.dependencyinjection.entities.Pet">
-        <constructor-arg ref="cat" />
+        <constructor-arg ref="dog" />
     </bean>
-
-
-
 
 </beans>

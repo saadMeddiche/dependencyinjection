@@ -1,8 +1,10 @@
 package com.dependencyinjection;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.dependencyinjection.configurations.AppConfig;
 import com.dependencyinjection.entities.Pet;
 
 /**
@@ -11,14 +13,26 @@ import com.dependencyinjection.entities.Pet;
  */
 public class App {
 
-    // Using ClassPathXmlApplicationContext , Xml File
     public static void main(String[] args) {
+        // dependencieinjectionUsingXml();
+        dependencieinjectionUsingJavaConfig();
+    }
+
+    public static void dependencieinjectionUsingXml() {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
         Pet pet = applicationContext.getBean("pet", Pet.class);
-        
-        pet.voice();
 
+        pet.voice();
+    }
+
+    public static void dependencieinjectionUsingJavaConfig() {
+
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Pet pet = applicationContext.getBean("pet", Pet.class);
+
+        pet.voice();
     }
 }
